@@ -1,0 +1,189 @@
+/* set basic styles */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* add styles for header */
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header h1 {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+nav ul {
+	display: flex;
+	flex-direction: row;
+}
+
+nav ul li {
+	list-style: none;
+	margin-right: 20px;
+}
+
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+nav ul li a:hover {
+	text-decoration: underline;
+}
+
+/* add styles for introduction section */
+.background-image {
+    background-color: #222;
+	height: 400px;
+	background-size: cover;
+	background-position: center;
+    z-index: 2;
+}
+
+section#intro {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 50px;
+}
+
+section#intro h2 {
+	font-size: 36px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+section#intro p {
+	font-size: 18px;
+	margin-bottom: 30px;
+}
+
+section#intro button {
+	background-color: #fff;
+	color: #333;
+	padding: 10px 20px;
+	font-size: 18px;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out;
+}
+
+section#intro button:hover {
+	background-color: #ccc;
+}
+
+/* add styles for chord input section */
+section#input {
+	padding: 50px;
+	text-align: center;
+}
+
+section#input h2 {
+	font-size: 36px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+section#input input[type=text] {
+	padding: 10px;
+	font-size: 18px;
+	border: none;
+	border-radius: 5px;
+	margin-right: 20px;
+}
+
+section#input button {
+	background-color: #fff;
+	color: #333;
+	padding: 10px 20px;
+	font-size: 18px;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out;
+}
+
+section#input button:hover {
+	background-color: #ccc;
+}
+
+/* add styles for progression display section */
+section#progression {
+	padding: 50px;
+	text-align: center;
+}
+
+section#progression h2 {
+	font-size: 36px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+section#progression p {
+	font-size: 18px;
+	margin-bottom: 30px;
+}
+
+/* add styles for next chord recommendation section */
+section#recommendation {
+	padding: 50px;
+	text-align: center;
+}
+
+section#recommendation h2 {
+	font-size: 36px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+section#recommendation p {
+	font-size: 18px;
+	margin-bottom: 30px;
+}
+
+/* add styles for footer */
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+footer nav ul {
+	display: flex;
+	flex-direction: row;
+}
+	
+    footer nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        list-style: none;
+	    margin-right: 20px
+    }
+    
+    footer nav ul li a:hover {
+        text-decoration: underline;
+    }
+    
+    footer p {
+        font-size: 14px;
+    }
+	section#intro button {
+		border: 1px solid #333;
+	  }
+	  

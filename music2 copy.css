@@ -1,0 +1,136 @@
+/* Global styles */
+html {
+    font-size: 62.5%; /* Set base font size to 10px */
+  }
+  
+  body {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    background-color: #f7f7f7;
+    color: #333;
+    margin: 0;
+  }
+  
+  a {
+    color: #444;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #fff;
+    color: #333;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  nav ul {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  nav ul li {
+    list-style: none;
+    margin-right: 2rem;
+  }
+  
+  nav ul li a {
+    color: #444;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+  
+  nav ul li a:hover {
+    color: #666;
+  }
+  
+  /* Main styles */
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  }
+  
+  section {
+    margin-bottom: 4rem;
+  }
+  
+  h2 {
+    margin: 0 0 2rem;
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  input[type="text"] {
+    font-size: 1.6rem;
+    padding: 1rem;
+    border-radius: 5px;
+    border: none;
+    margin-right: 2rem;
+    width: 20rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  button {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  button:hover {
+    background-color: #222;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  li:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  li span {
+    font-weight: 700;
+  }
+  

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  
+    <header>
+      <div class="container">
+        <h1>Piano Notes Gamer</h1>
+        <nav>
+          <ul>
+            <li><a href="/music/music 1/<!DOCTYPE html>.html">Home / Classical Generator</a></li>
+              
+            <li><a href="/music/music 2/music2.html">Lofi Chord Generator</a></li>
+            <li><a href="/music/music 4/music2 copy.html">Jazz Chord Generator</a></li>
+            <li><a href="/piano code/LIAM 2ND TRY.HTML">Treble & Bass Clef Training</a></li>
+          
+            <li><a href="#input">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+  
+
+    <style>
+      body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: rgb(0, 0, 0);
+}
+
+      #bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  z-index: -1;
+}
+</style>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Piano Notes Game</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      
+      h1 {
+        text-align: center;
+      }
+      
+      p {
+        margin: 10px 0;
+      }
+      
+      #gameContainer {
+        text-align: center;
+      }
+      
+      #gameContainer.hidden {
+        display: none;
+      }
+      
+      #noteInput {
+        width: 50px;
+        margin: 10px;
+      }
+      
+      #submitNote {
+        margin: 10px;
+      }
+      
+      #feedback {
+        margin-top: 20px;
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+
+      .piano {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #000;
+        padding: 50px;
+      }
+
+      .key {
+        width: 50px;
+        height: 200px;
+        margin: 10px;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .key.black {
+        width: 30px;
+        height: 120px;
+        margin-top: -120px;
+        background-color: #000;
+        z-index: 1;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .text {
+        font-family: Arial, sans-serif;
+        font-size: 24px;
+        color: #fff;
+        text-align: center;
+      }
+
+      #timer {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#time {
+  color: red;
+}
+  /* Header styles */
+  header {
+    background-color: #fff;
+    color: #333;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  nav ul {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  nav ul li {
+    list-style: none;
+    margin-right: 2rem;
+  }
+  
+  nav ul li a {
+    color: #444;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+  
+  nav ul li a:hover {
+    color: #666;
+  }
+  
+
+/* Style the start game button */
+#startGame {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color:transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+#startGame:hover {
+  background-color: transparent;
+}
+
+/* Style the game container */
+#gameContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+/* Style the note image */
+#noteImage {
+  max-width: 100%;
+  margin-bottom: 2rem;
+}
+
+/* Style the note input field */
+#noteInput {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+/* Style the submit note button */
+#submitNote {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+#submitNote:hover {
+  background-color: #0062cc;
+}
+
+/* Style the feedback text */
+#feedback {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+/* Style the timer */
+#time {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#gameContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#noteImage {
+  display: block;
+  margin: 0 auto;
+}
+#gameContainer h2 {
+  text-align: center;
+}
+.button-container {
+  background-color: transparent;
+  text-align: center;
+}
+
+.custom-button {
+  background-color: transparent;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+
+
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.image-container img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+
+    </style>
+  </head>
+  <body>
+    
+  
+
+    <p></p>
+    <a href="#" id="startGame">
+      <div class="button-container">
+        <button class="custom-button">Click to start playing</button>
+      </div>
+      
+    </a>
+    <div id="gameContainer" class="hidden">
+      <p>Enter the letter of the note shown:</p>
+      <p>Make sure the note is labeled with the number, eg, C4,C5,C#5,..</p>
+      <img src="#" alt="Note Image" id="noteImage">
+      <input type="text" id="noteInput">
+      <button id="submitNote">Submit</button>
+      <p id="feedback"></p>
+    </div>
+   
+<script>
+  const notes = {
+    'C4': 'https://cdn.glitch.global/901b1aa5-43b1-426d-aca1-37814479254f/Screen%20Shot%202023-03-24%20at%203.11.02%20PM.png?v=1679667067665',
+    'D4': 'https://cdn.glitch.global/901b1aa5-43b1-426d-aca1-37814479254f/Screen%20Shot%202023-03-24%20at%203.13.45%20PM.png?v=1679667233030',
+    'E4': 'https://cdn.glitch.global/901b1aa5-43b1-426d-aca1-37814479254f/Screen%20Shot%202023-03-24%20at%203.14.46%20PM.png?v=1679667289825',
+    'F4': 'https://cdn.glitch.global/901b1aa5-43b1-426d-aca1-37814479254f/Screen%20Shot%202023-03-24%20at%203.15.09%20PM.png?v=1679667318324',
+    'G4': 'https://cdn.glitch.global/901b1aa5-43b1-426d-aca1-37814479254f/Screen%20Shot%202023-03-24%20at%203.15.42%20PM.png?v=1679667347035',
+    'A5': 'https://cdn.glitch.global/901b1aa5-43b1-426d-aca1-37814479254f/Screen%20Shot%202023-03-24%20at%203.16.24%20PM.png?v=1679667393975',
+    'B5': 'https://cdn.glitch.global/901b1aa5-43b1-426d-aca1-37814479254f/Screen%20Shot%202023-03-24%20at%203.16.50%20PM.png?v=1679667413375',
+    'C5': 'https://cdn.glitch.global/901b1aa5-43b1-426d-aca1-37814479254f/Screen%20Shot%202023-03-31%20at%2011.18.28%20PM.png?v=1680297542893',
+    'C#5': 'https://cdn.glitch.global/901b1aa5-43b1-426d-aca1-37814479254f/Screen%20Shot%202023-03-31%20at%2011.31.34%20PM.png?v=1680298307291',
+    'D5': 'https://cdn.glitch.global/901b1aa5-43b1-426d-aca1-37814479254f/Screen%20Shot%202023-03-31%20at%2011.33.01%20PM.png?v=1680298384386',
+    'D#5': 'https://cdn.glitch.global/901b1aa5-43b1-426d-aca1-37814479254f/Screen%20Shot%202023-03-31%20at%2011.35.53%20PM.png?v=1680298559233',
+    'E5': 'https://cdn.glitch.global/901b1aa5-43b1-426d-aca1-37814479254f/Screen%20Shot%202023-03-31%20at%2011.36.45%20PM.png?v=1680298608496',
+    'F5': 'https://cdn.glitch.global/901b1aa5-43b1-426d-aca1-37814479254f/Screen%20Shot%202023-03-31%20at%2011.37.37%20PM.png?v=1680298661392',
+    'F#5': 'https://cdn.glitch.global/901b1aa5-43b1-426d-aca1-37814479254f/Screen%20Shot%202023-03-31%20at%2011.38.10%20PM.png?v=1680298695550',
+    'G5': 'https://cdn.glitch.global/901b1aa5-43b1-426d-aca1-37814479254f/Screen%20Shot%202023-03-31%20at%2011.38.44%20PM.png?v=1680298727094',
+    'G#5': 'https://cdn.glitch.global/901b1aa5-43b1-426d-aca1-37814479254f/Screen%20Shot%202023-03-31%20at%2011.40.24%20PM.png?v=1680298827699',
+    'A5': 'https://cdn.glitch.global/901b1aa5-43b1-426d-aca1-37814479254f/Screen%20Shot%202023-03-31%20at%2011.40.49%20PM.png?v=1680298853370',
+    'A#5': 'https://cdn.glitch.global/901b1aa5-43b1-426d-aca1-37814479254f/Screen%20Shot%202023-03-31%20at%2011.41.30%20PM.png?v=1680298894148',
+    'B5': 'https://cdn.glitch.global/901b1aa5-43b1-426d-aca1-37814479254f/Screen%20Shot%202023-03-31%20at%2011.42.19%20PM.png?v=1680298942756',
+    'C6': 'https://cdn.glitch.global/901b1aa5-43b1-426d-aca1-37814479254f/Screen%20Shot%202023-03-31%20at%2011.52.47%20PM.png?v=1680299590590',
+   
+
+
+    
+
+    
+  };
+  let currentNote;
+
+  const startGameButton = document.getElementById('startGame');
+  const gameContainer = document.getElementById('gameContainer');
+  const noteImage = document.getElementById('noteImage');
+  const noteInput = document.getElementById('noteInput');
+  const submitNoteButton = document.getElementById('submitNote');
+  const feedbackText = document.getElementById('feedback');
+
+  startGameButton.addEventListener('click', startGame);
+  submitNoteButton.addEventListener('click', submitNote);
+
+  function startGame() {
+    currentNote = getRandomNote();
+    noteImage.src = notes[currentNote];
+    gameContainer.classList.remove('hidden');
+    startGameButton.classList.add('hidden');
+    feedbackText.innerHTML = '';
+    noteInput.value = '';
+    noteInput.focus();
+  }
+
+  function submitNote() {
+    const submittedNote = noteInput.value.toUpperCase();
+    if (submittedNote === currentNote) {
+      feedbackText.innerHTML = 'Correct!';
+      currentNote = getRandomNote();
+      noteImage.src = notes[currentNote];
+      noteInput.value = '';
+      noteInput.focus();
+    } else {
+      feedbackText.innerHTML = 'Try again.';
+    }
+  }
+
+  function getRandomNote() {
+    return Object.keys(notes)[Math.floor(Math.random() * Object.keys(notes).length)];
+  }
+
+  noteInput.addEventListener('input', function() {
+  if (noteInput.value.toUpperCase() === currentNote) {
+    submitNote();
+  }
+});
+submitNoteButton.addEventListener('click', submitNote);
+
+
+
+</script>
+
